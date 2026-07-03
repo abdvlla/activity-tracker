@@ -1,5 +1,6 @@
 {
   "expo": {
+    "scheme": "reactnativetutorial", // reactnativeapp://
     "name": "react-native-tutorial",
     "slug": "react-native-tutorial",
     "version": "1.0.0",
@@ -13,7 +14,11 @@
       "backgroundColor": "#ffffff"
     },
     "ios": {
-      "supportsTablet": true
+      "supportsTablet": true,
+      "bundleIdentifier": "com.abood67200.reactnativetutorial",
+      "infoPlist": {
+        "ITSAppUsesNonExemptEncryption": false
+      }
     },
     "android": {
       "adaptiveIcon": {
@@ -21,10 +26,20 @@
         "backgroundColor": "#ffffff"
       },
       "edgeToEdgeEnabled": true,
-      "predictiveBackGestureEnabled": false
+      "predictiveBackGestureEnabled": false,
+      "package": "com.abood67200.reactnativetutorial"
     },
     "web": {
-      "favicon": "./assets/favicon.png"
-    }
+      "favicon": "./assets/favicon.png",
+      "bundler": "metro"
+    },
+    "extra": {
+      "eas": {
+        "projectId": "93705515-c71a-4c80-83ee-bf5cddbc2983"
+      }
+    },
+    "plugins": [
+      "expo-router"
+    ]
   }
 }
