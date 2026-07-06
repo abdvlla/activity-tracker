@@ -1,5 +1,5 @@
-import fontawesome
 import { Tabs } from "expo-router";
+import { FontAwesome } from "@react-native-vector-icons/fontawesome";
 
 export default function TabLayout() {
   return (
@@ -14,11 +14,11 @@ export default function TabLayout() {
         }}
       />
       <Tabs.Screen
-        name="settings"
+        name="steps"
         options={{
-          title: "Settings",
+          title: "Steps",
           tabBarIcon: ({ color }) => (
-            <FontAwesome size={28} name="cog" color={color} />
+            <FontAwesome size={28} name="arrow-up" color={color} />
           ),
         }}
       />
