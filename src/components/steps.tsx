@@ -1,7 +1,7 @@
 import { StyleSheet, Text, View } from "react-native";
 import React from "react";
 import { Pedometer } from "expo-sensors";
-import { colors } from "@/app/theme";
+import { colors, globalStyles } from "@/styles/global";
 
 type StepsProps = {
   stepsGoal: number;
@@ -46,10 +46,10 @@ const Steps = ({ stepsGoal }: StepsProps) => {
   const progress = Math.min(currentStepCount / stepsGoal, 1);
 
   return (
-    <View style={styles.screen}>
-      <Text style={styles.headerLabel}>Today</Text>
+    <View style={globalStyles.container}>
+      <Text style={globalStyles.sectionHeader}>Today</Text>
 
-      <View style={styles.card}>
+      <View style={globalStyles.card}>
         <Text style={styles.bigNumber}>
           {currentStepCount.toLocaleString()}
         </Text>
@@ -74,17 +74,9 @@ export default Steps;
 const styles = StyleSheet.create({
   headerLabel: {
     fontSize: 14,
-    color: colors.textMuted,
+    color: colors.muted,
     fontWeight: "500",
     marginBottom: 8,
-  },
-  card: {
-    backgroundColor: colors.card,
-    borderRadius: 16,
-    borderWidth: 1,
-    borderColor: colors.border,
-    padding: 24,
-    alignItems: "center",
   },
   bigNumber: {
     fontSize: 48,
@@ -93,7 +85,7 @@ const styles = StyleSheet.create({
   },
   subLabel: {
     fontSize: 14,
-    color: colors.textMuted,
+    color: colors.muted,
     marginTop: 4,
     marginBottom: 20,
   },
@@ -112,11 +104,11 @@ const styles = StyleSheet.create({
   metaText: {
     marginTop: 16,
     fontSize: 13,
-    color: colors.textMuted,
+    color: colors.muted,
   },
   screen: {
     flex: 1,
-    backgroundColor: colors.bg,
+    backgroundColor: colors.background,
     paddingHorizontal: 20,
     paddingTop: 16,
   },

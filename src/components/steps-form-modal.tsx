@@ -1,4 +1,4 @@
-import { colors } from "@/app/theme";
+import { colors } from "@/styles/global";
 import React from "react";
 import {
   Alert,
@@ -49,7 +49,7 @@ const StepsFormModal = ({ stepsGoal, setStepsGoal }: StepsFormModalProps) => {
               style={styles.input}
               onChangeText={setGoalInput}
               value={goalInput}
-              placeholderTextColor={colors.textMuted}
+              placeholderTextColor={colors.muted}
               keyboardType="numeric"
               autoFocus
             />
@@ -86,10 +86,10 @@ const styles = StyleSheet.create({
     paddingVertical: 12,
     paddingHorizontal: 24,
     borderRadius: 12,
-    backgroundColor: colors.accentLight,
+    backgroundColor: colors.primary,
   },
   setGoalButtonText: {
-    color: colors.accent,
+    color: "#0a0a0a",
     fontWeight: "600",
     fontSize: 15,
   },
@@ -101,7 +101,7 @@ const styles = StyleSheet.create({
   },
   modalCard: {
     margin: 40,
-    backgroundColor: "white",
+    backgroundColor: colors.card,
     borderRadius: 20,
     padding: 24,
     shadowColor: "#000",
@@ -119,20 +119,20 @@ const styles = StyleSheet.create({
     marginBottom: 16,
   },
   confirmButton: {
-    backgroundColor: colors.accent,
+    backgroundColor: colors.primary,
     paddingVertical: 14,
     borderRadius: 10,
     alignItems: "center",
     marginBottom: 12,
   },
   confirmButtonText: {
-    color: "#FFF",
+    color: colors.header,
     fontWeight: "600",
     fontSize: 16,
   },
   cancelText: {
     textAlign: "center",
-    color: colors.textMuted,
+    color: colors.muted,
     fontSize: 15,
   },
   modalText: {
@@ -144,5 +144,7 @@ const styles = StyleSheet.create({
     margin: 12,
     borderWidth: 1,
     padding: 10,
+    borderColor: colors.border,
+    color: "white",
   },
 });
